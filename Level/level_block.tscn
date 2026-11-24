@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://mjkw3li4i1vw"]
+
+[ext_resource type="PackedScene" uid="uid://ceeojlmx0h15b" path="res://Level/hallway.tscn" id="1_sknmk"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4wbbl"]
+size = Vector2(2.2, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4wbbl"]
+size = Vector3(2.111, 2.1, 0.12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pce70"]
+size = Vector3(0.12, 2.1, 2.875)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dlels"]
+size = Vector2(3.3, 2.5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_t3xnq"]
+size = Vector2(4.3, 5.3)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_o5ul7"]
+size = Vector2(2.8, 3.3)
+
+[node name="LevelBlock" type="Node3D" unique_id=1596481003]
+
+[node name="Entry" type="MeshInstance3D" parent="." unique_id=1233781528]
+mesh = SubResource("PlaneMesh_4wbbl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Entry" unique_id=1910467279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07884216, 1.019163, 1.5000749)
+mesh = SubResource("BoxMesh_4wbbl")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Entry" unique_id=1452329862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0308422, 1.0126472, -0.024899721)
+mesh = SubResource("BoxMesh_pce70")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Entry" unique_id=2057739475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07884216, 1.019163, -1.5169251)
+mesh = SubResource("BoxMesh_4wbbl")
+
+[node name="Bathroom" type="MeshInstance3D" parent="." unique_id=787271034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.05428, 0, 2.1444128)
+mesh = SubResource("PlaneMesh_dlels")
+
+[node name="kitchen_living_r" type="MeshInstance3D" parent="." unique_id=79540836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5685234, 0, 6.297657)
+mesh = SubResource("PlaneMesh_t3xnq")
+
+[node name="master_br" type="MeshInstance3D" parent="." unique_id=1677669830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1838546, 0, 4.374069)
+mesh = SubResource("PlaneMesh_t3xnq")
+
+[node name="child_br" type="MeshInstance3D" parent="." unique_id=2013993339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.93337, 0, 7.9002113)
+mesh = SubResource("PlaneMesh_o5ul7")
+
+[node name="Hallway" parent="." unique_id=2091208840 instance=ExtResource("1_sknmk")]
